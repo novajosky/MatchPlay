@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
-const SALT_ROUNDS = 6; //6 good for most apps
+const SALT_ROUNDS = 10; //6 good for most apps
 
 const userSchema = new Schema({
     name: {type: String, required: true},
