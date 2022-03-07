@@ -8,7 +8,7 @@ export default function Auth({ setUser }) {
   
   return (
     <main>
-      <h1>AuthPage</h1>
+      <h1>Sign Up Page</h1>
       <button onClick={() => setShowSignUp(!showSignUp)}>
         {showSignUp ? "Switch to Log In" : "Switch to Sign Up"}
       </button>
