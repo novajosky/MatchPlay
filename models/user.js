@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
-const SALT_ROUNDS = 10; //6 good for most apps
+const SALT_ROUNDS = 6; //6 good for most apps
 
 const userSchema = new Schema({
     name: {type: String, required: true},
@@ -18,7 +18,47 @@ const userSchema = new Schema({
       trim: true,
       minLength: 3,
       required: true
-    }
+    },
+    age: {
+      type: Number,
+      required: true,
+    },
+    citystate: {
+      type: String,
+      required: true,
+    },
+    gender: {
+      type: String,
+      required: true,
+    },
+    pfgender: {
+      type: String,
+      required: true,
+    },
+    handicap: {
+      type: String,
+      required: true,
+    },
+    playage: {
+      type: String,
+      required: true,
+    },
+    drinker: {
+      type: String,
+      required: true,
+    },
+    meticulous: {
+      type: String,
+      required: true,
+    },
+    etiquette: {
+      type: String,
+      required: true,
+    },
+    skillset: {
+      type: String,
+      required: true,
+    },
 }, { 
     timestamps: true,
     //Even though it's hashed - don't serialize the password

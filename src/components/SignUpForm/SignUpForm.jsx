@@ -8,11 +8,11 @@ export default class SignUpForm extends Component {
         password: '',
         confirm: '',
         age: '',
+        citystate: '',
         gender: '',
         pfgender: '',
         handicap: '',
         playage: '',
-        citystate: '',
         drinker: '',
         meticulous:'',
         etiquette: '',
@@ -63,7 +63,9 @@ export default class SignUpForm extends Component {
                 <label>Confirm</label>
                 <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
                 <label>Age</label>
-                <input type="age" name="age" value={this.state.age} onChange={this.handleChange} required />
+                <input type="age" placeholder="Example: 33" name="age" value={this.state.age} onChange={this.handleChange} required />
+                <label>Location</label>
+                <input type="citystate" placeholder="Example: Seattle, Washington" name="citystate" value={this.state.citystate} onChange={this.handleChange} required />
                 <label>Gender</label>
                 <select type="gender" name="gender" value={this.state.gender} onChange={this.handleChange} required>
                   <option value="male">Male</option>  
