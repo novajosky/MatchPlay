@@ -21,28 +21,29 @@ export default class SignUpForm extends Component {
     };
 
     handleChange = (evt) => {
-        this.setState({
-          [evt.target.name]: evt.target.value,
-          error: ''
-        });
-    };    
-
+      this.setState({
+        [evt.target.name]: evt.target.value,
+        error: ''
+      });
+    };
+  
     handleSubmit = async (evt) => {
-        evt.preventDefault();
-        try {
-            const formData = {...this.state};
-            delete formData.confirm;
-            delete formData.error;
-            //promise returned by the signup service method will
-            //resolve to the use object included in the payload of
-            //the JSON web token JWT
-            const user = await signUp(formData);
-            this.props.setUser(user);
-
-        } catch {
-            this.setState({ error: 'Sign up Failed - Try again' });
-        }
-    };    
+      evt.preventDefault();
+      try {
+        const formData = {...this.state};
+        delete formData.confirm;
+        delete formData.error;
+        // The promise returned by the signUp service method
+        // will resolve to the user object included in the 
+        // payload of the JSON Web Token (JWT)
+        const user = await signUp(formData);
+        // Baby step 
+        this.props.setUser(user);
+      } catch {
+        // An error happened on the server
+        this.setState({ error: 'Sign Up Failed - Try Again' });
+      }
+    };
 
     //must override the render method
     //the render method is the equivalent to a function-based component
@@ -101,6 +102,7 @@ export default class SignUpForm extends Component {
                 <select type="meticulous" name="meticulous" value={this.state.meticulous} onChange={this.handleChange} required>
                   <option value="slowplayer">I take my time in preparing for a shot.</option>
                   <option value="fastplayer">I play fast. I don't like to wait.</option>
+                  <option value="notslow">I play at a good pace.</option>
                 </select>
                 <label>Are you a stickler for eqiquette?</label>
                 <select type="etiquette" name="etiquette" value={this.state.etiquette} onChange={this.handleChange} required>
