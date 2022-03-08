@@ -1,11 +1,12 @@
+import React from "react";
+import Sidebar from '../../components/Sidebar/Sidebar';
+
 export default function Messages() {
 
     return (
-      <>
-        <h1>
-          My Messages
-        </h1>
-      </>
+      <div className="d-flex" style={{ height: '100vh' }}>
+        <Sidebar/>
+      </div>
     );
   }
   

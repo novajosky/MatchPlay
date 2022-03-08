@@ -6,6 +6,7 @@ import ProfilePage from '../ProfilePage/ProfilePage';
 import MessagesPage from '../MessagesPage/MessagesPage';
 import NavBar from "../../components/NavBar/NavBar"
 import { getUser } from '../../utilities/users-service';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 export default function App() {
   const [user, setUser] = useState(getUser());

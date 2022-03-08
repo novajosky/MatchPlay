@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/messages">Messages</Link>
       &nbsp; | &nbsp;
-      <Link to="">Contact Us</Link>
+      <Link to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
