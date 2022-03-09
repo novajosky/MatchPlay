@@ -18,7 +18,49 @@ const userSchema = new Schema({
     trim: true,
     minlength: 3,
     required: true
-  }
+  },
+  age: {
+    type: Number,
+    required: true
+  },
+  citystate: {
+    type: String,
+    required: true
+  },
+  handicap: {
+    type: Number,
+    required: true
+  },
+  gender: {
+    type: String,
+    enum: ["male", "female", "other"],
+    required: true
+  },
+  pfgender: {
+    type: String,
+    enum: ['men', 'women', 'anyone'],
+    required: true
+  },
+  drinker: {
+    type: String,
+    enum: ['lightdrink', 'othersdrink', 'no alcohol', 'drunk'],
+    required: true
+  },
+  meticulous: {
+    type: String,
+    enum: ['slowplayer', 'fastplayer', 'notslow'],
+    required: true
+  },
+  etiquette: {
+    type: String,
+    enum: ['stickler', 'lax', 'somerules'],
+    required: true
+  },
+  skillset: {
+    type: String,
+    enum: ['anylevel', 'mylevel', 'somelevel'],
+    required: true
+  },
 }, {
   timestamps: true,
   toJSON: {
