@@ -41,9 +41,14 @@ const userSchema = new Schema({
     enum: ['men', 'women', 'anyone'],
     required: true
   },
+  playage: {
+    type: String,
+    enum: ["sameage", "anyage"],
+    required: true
+  },
   drinker: {
     type: String,
-    enum: ['lightdrink', 'othersdrink', 'no alcohol', 'drunk'],
+    enum: ["lightdrink", "othersdrink", "no alcohol", "drunk"],
     required: true
   },
   meticulous: {
