@@ -2,9 +2,9 @@ export default function Profile() {
 
   return (
     <>
-      <h1>
+      <div className="container">
         My Profile
-      </h1>
+      </div>
     </>
   );
 }

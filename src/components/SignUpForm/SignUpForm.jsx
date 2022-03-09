@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import './SignUpForm.css'
 
 export default class SignUpForm extends Component {
     state = {
@@ -10,13 +11,13 @@ export default class SignUpForm extends Component {
         age: '',
         citystate: '',
         handicap: '',
-        gender: '',
-        pfgender: '',
-        playage: '',
-        drinker: '',
-        meticulous:'',
-        etiquette: '',
-        skillset: '',
+        gender: 'male',
+        pfgender: 'men',
+        playage: 'anyage',
+        drinker: 'drunk',
+        meticulous:'fastplayer',
+        etiquette: 'stickler',
+        skillset: 'anylevel',
         error: ''
     };
 
@@ -64,11 +65,11 @@ export default class SignUpForm extends Component {
                 <label>Confirm</label>
                 <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
                 <label>Age</label>
-                <input type="age" placeholder="Example: 33" name="age" value={this.state.age} onChange={this.handleChange} required />
+                <input type="number" placeholder="Example: 33" name="age" value={this.state.age} onChange={this.handleChange} required />
                 <label>Location</label>
                 <input type="text" placeholder="Example: Seattle, Washington" name="citystate" value={this.state.citystate} onChange={this.handleChange} required />
                 <label>What is your Handicap?</label>
-                <input type="text" placeholder="Try to estimate otherwise, enter 30" name="handicap" value={this.state.handicap} onChange={this.handleChange} required />
+                <input type="number" placeholder="Try to estimate otherwise, enter 30" name="handicap" value={this.state.handicap} onChange={this.handleChange} required />
                 <label>Gender</label>
                 <select type="text" name="gender" value={this.state.gender} onChange={this.handleChange} required>
                   <option value="male">male</option>

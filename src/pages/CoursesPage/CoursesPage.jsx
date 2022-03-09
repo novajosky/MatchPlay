@@ -6,12 +6,12 @@ import './CoursesPage.css'
 export default function CoursesPage() {  
   return (
     // <LoadScript
-    // googleMapsApiKey='AIzaSyCGGeaW6OJqGhfbGSziAqnbiuq102_XD08'>
+    // googleMapsApiKey='MAP_KEY'>
     //  <GoogleMap
     //  />
     // </LoadScript>
-    <div>
-      courses
+    <div className="container">
+      Courses
     </div>
   )
 }
