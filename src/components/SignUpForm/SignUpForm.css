@@ -17,40 +17,6 @@ code {
     monospace;
 }
 
-#root {
-  height: 100%;
-}
-
-.align-ctr {
-  text-align: center;
-}
-
-.align-rt {
-  text-align: right;
-}
-
-.smaller {
-  font-size: smaller;
-}
-
-.flex-ctr-ctr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-j-end {
-  justify-content: flex-end;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-}
-
 .section-heading {
   display: flex;
   justify-content: space-around;
@@ -87,18 +53,9 @@ label {
   font-size: 1.4vmin;
   display: flex;
   align-items: center;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
-input {
-  padding: 0.4vmin;
-  font-size: 0.5vmin;
-  border: .1vmin solid rgb(176, 236, 148);
-  border-radius: 1vmin;
-  color: rgb(2, 53, 0);
-  background-image: none !important; /* prevent lastpass */
-  outline: none;
-}
 
 input:focus {
   border-color: rgb(53, 133, 1);
