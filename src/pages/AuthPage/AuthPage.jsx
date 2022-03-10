@@ -10,7 +10,6 @@ export default function Auth({ setUser }) {
   return (
     <main>
       <div>
-        <Logo />
         <button onClick={() => setShowSignUp(!showSignUp)}>
           {showSignUp ? "Switch to Log In" : "Switch to Sign Up"}
         </button>

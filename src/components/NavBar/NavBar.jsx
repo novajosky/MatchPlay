@@ -22,13 +22,26 @@ export default function NavBar({ user, setUser }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <p>Welcome {user.name}</p>
-            <Link className="link" to="/profile">My Profile</Link>
-            <Link className="link" to="/messages">Messages</Link>
-            <Link className="link" to="/golfers">Golfers</Link>
-            <Link className="link" to="/courses">Courses</Link>
-            <Link className="link" to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
-            <Link className="link" to="" onClick={handleLogOut}>Log Out</Link>
+            {user ?
+              <>
+              <p>Welcome {user.name}</p>
+                <Link className="link" to="/profile">My Profile</Link>
+                <Link className="link" to="/messages">Messages</Link>
+                <Link className="link" to="/golfers">Golfers</Link>
+                <Link className="link" to="/courses">Courses</Link>
+                <Link className="link" to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
+                <Link className="link" to="" onClick={handleLogOut}>Log Out</Link>
+              </>
+              :
+              <>
+                <Link className="link" to="/profile">My Profile</Link>
+                <Link className="link" to="/messages">Messages</Link>
+                <Link className="link" to="/golfers">Golfers</Link>
+                <Link className="link" to="/courses">Courses</Link>
+                <Link className="link" to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
+                <Link className="link" to="/login">Log In</Link>
+              </>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
