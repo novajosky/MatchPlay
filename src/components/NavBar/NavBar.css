@@ -12,6 +12,6 @@ p {
 }
 
 .logo {
-    background-color: rgb(250, 250, 250);
-    padding: 6px;
+    height: 40px;
+    width: 70px;
 }
