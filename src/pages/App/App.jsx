@@ -15,17 +15,15 @@ export default function App() {
 
   return (
     <main className="App">
-        <>
-          <NavBar user={user} setUser={setUser} />
-          <Routes>
-            <Route path="/" element={<HomePage />}/>
-            <Route path="/profile" element={<ProfilePage />}/>
-            <Route path="/messages" element={<MessagesPage />}/>
-            <Route path="/golfers" element={<GolfersPage />}/>
-            <Route path="/courses" element={<CoursesPage />}/>
-            <Route path="/login" element={<LogInPage />}/>
-          </Routes>
-        </>
+      <NavBar user={user} setUser={setUser} />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/profile" element={<ProfilePage />}/>
+        <Route path="/messages" element={<MessagesPage />}/>
+        <Route path="/golfers" element={<GolfersPage />}/>
+        <Route path="/courses" element={<CoursesPage />}/>
+        <Route path="/login" element={<LogInPage />}/>
+      </Routes>
     </main>
   );
 }

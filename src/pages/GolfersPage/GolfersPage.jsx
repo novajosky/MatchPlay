@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import {Card} from "react-bootstrap";
 // import axios from 'axios';
 
@@ -10,13 +11,18 @@ export default function GolfersPage() {
     drinker: '',
   }])
 
-  useEffect(() =>{
-    fetch("/user").then(res => {
-      if(res.ok) {
-        return res.json()
-      }
-    }).then(jsonRes => setUser(jsonRes))
-  })
+//   getUser = () => {
+//     axios.get('api')
+//       .then((response) => {
+//         const data = response.data;
+//         this.setState({ posts: data });
+//         console.log('Data has been recieved!');
+//       })
+//       .catch(() => {
+//         alert('error retriving data');
+//       });
+//   }
+// }
 
   return (
     <Card style={{ width: '18rem' }}>

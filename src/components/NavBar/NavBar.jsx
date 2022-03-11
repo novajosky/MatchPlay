@@ -4,6 +4,7 @@ import * as userService from '../../utilities/users-service';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import logo from '../../images/MatchPlay.png';
 import './NavBar.css'
 
 export default function NavBar({ user, setUser }) {
@@ -18,7 +19,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <Navbar bg="success" expand="lg" className="color-nav">
       <Container>
-        <Navbar.Brand className="logo" href="/"><img src="../public/MatchPlay.png" alt="MatchPlay"/></Navbar.Brand>
+        <Navbar.Brand className="logo" href="/"><img src={logo} alt="MatchPlay"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
