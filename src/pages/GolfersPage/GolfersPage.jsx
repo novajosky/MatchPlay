@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import {Card} from "react-bootstrap";
-// import axios from 'axios';
 
 export default function GolfersPage() {
   const[user, setUser] = useState([{

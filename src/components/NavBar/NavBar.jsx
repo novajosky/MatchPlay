@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <Navbar bg="success" expand="lg" className="color-nav">
       <Container>
-        <Navbar.Brand className="logo" href="/"><img src={logo} alt="MatchPlay"/></Navbar.Brand>
+        <Navbar.Brand className="logo" href="/"><img className="mplogo" src={logo} alt="MatchPlay"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
