@@ -1,4 +1,4 @@
-const { Post } = require("../../routes/api/users");
+const { Post } = require("../../routes/api/messages");
 
 async function getAll(req, res) {
     const posts = await Post.find({

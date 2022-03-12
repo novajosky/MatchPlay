@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import * as postsAPI from '../../utilities/posts-api'
+import MessageForm from '../MessageForm/MessageForm'
+import DisplayMessages from '../DisplayMessages/DisplayMessages'
 
 export default function MessageBoard() {
     const [posts, setPosts] = useState([]);
@@ -16,9 +18,13 @@ export default function MessageBoard() {
         const post = await postsAPI.add(postData);
         setPosts([...posts, post]);
     }
-  return (
-    <div>
-        MessageBoard
-    </div>
-  )
+    return (
+        <main>
+            <div></div>
+            <MessageForm />
+            <DisplayMessages />
+            <div></div>
+        </main>
+    )
 }
+

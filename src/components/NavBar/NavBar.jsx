@@ -25,7 +25,7 @@ export default function NavBar({ user, setUser }) {
           <Nav className="me-auto">
             {user ?
               <>
-              <p>Welcome {user.name}</p>
+              <p className='navp'>Welcome {user.name}</p>
                 <Link className="link" to="/profile">My Profile</Link>
                 <Link className="link" to="/messages">Messages</Link>
                 <Link className="link" to="/golfers">Golfers</Link>

@@ -1,7 +1,10 @@
 import React from 'react'
+import { useState } from "react";
 
 export default function MessageForm({handleAddPost}) {
-    const [content, setcontent] = useState('');
+    const [title, setTitle] = useState([]);
+    const [images, setImages] = useState([]);
+    const [content, setContent] = useState([]);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -9,12 +12,27 @@ export default function MessageForm({handleAddPost}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <textarea
-                value={content}
-                onChange={e => setcontent(e.target.value)}
-            />
-            <button type="submit">Add Post</button>
-        </form>
+        <main>
+            <form onSubmit={handleSubmit}>
+                <label>Add Photo</label>
+                <input 
+                    value={images}
+                    onChange={e => setImages(e.target.value)} 
+                    type="file" accept="image/*"></input>
+                <label>Title</label>
+                <input
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                    />
+                <label>Content</label>
+                <textarea
+                    value={content}
+                    onChange={e => setContent(e.target.value)}
+                    />
+                <button type="submit">Add Post</button>
+            </form>
+            <div>
+            </div>
+        </main>
     );
 }

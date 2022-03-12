@@ -5,6 +5,6 @@ const postsCtrl = require('../../controllers/api/messages');
 
 // router.get('/', postsCtrl.getAll)
 
-// router.post('/messages', postsCtrl.create)
+// router.post('/', postsCtrl.create)
 
 module.exports = router;
