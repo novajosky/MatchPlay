@@ -10,7 +10,7 @@ export default function Profile() {
     // setUser(user);
     setUser(UserDetail)
   }, [])
-  console.log(user['age'])
+  console.log(user)
 
   return (
     <main>

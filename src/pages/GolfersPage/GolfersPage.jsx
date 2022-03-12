@@ -23,8 +23,8 @@ export default function GolfersPage() {
 // }
 
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src="holder.js/120px120" />
       <Card.Body>
         <Card.Title>User</Card.Title>
         <Card.Text>
