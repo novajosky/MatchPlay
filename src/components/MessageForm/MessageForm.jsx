@@ -2,13 +2,19 @@ import React from 'react'
 import { useState } from "react";
 
 export default function MessageForm({handleAddPost}) {
-    const [title, setTitle] = useState([]);
-    const [images, setImages] = useState([]);
-    const [content, setContent] = useState([]);
+    const [formData, setFormData] = useState({
+        // photo: '',
+        title: '',
+        content: ''
+    })
+
+    function handleChange(evt) {
+        setFormData({...formData, [evt.target.name]: evt.target.value});
+    }
 
     function handleSubmit(e) {
         e.preventDefault();
-        handleAddPost(content);
+        handleAddPost(formData);
     }
 
     return (
@@ -16,18 +22,18 @@ export default function MessageForm({handleAddPost}) {
             <form onSubmit={handleSubmit}>
                 <label>Add Photo</label>
                 <input 
-                    value={images}
-                    onChange={e => setImages(e.target.value)} 
+                    value={formData.photo} name="photo"
+                    onChange={e => handleChange(e)} 
                     type="file" accept="image/*"></input>
                 <label>Title</label>
                 <input
-                    value={title}
-                    onChange={e => setTitle(e.target.value)}
+                    value={formData.title} name="title"
+                    onChange={e => handleChange(e)}
                     />
                 <label>Content</label>
                 <textarea
-                    value={content}
-                    onChange={e => setContent(e.target.value)}
+                    value={formData.content} name="content"
+                    onChange={e => handleChange(e)}
                     />
                 <button type="submit">Add Post</button>
             </form>

@@ -13,16 +13,18 @@ export default function MessageBoard() {
         }
         getPosts();
     }, []);
-
+        console.log(posts)
     async function handleAddPost(postData) {
+        console.log(postData)
         const post = await postsAPI.add(postData);
+        console.log(post)
         setPosts([...posts, post]);
     }
     return (
         <main>
             <div></div>
-            <MessageForm />
-            <DisplayMessages />
+            <MessageForm handleAddPost={handleAddPost}/>
+            <DisplayMessages posts={posts} />
             <div></div>
         </main>
     )

@@ -6,5 +6,6 @@ export function getAll() {
 }
 
 export function add(postData) {
+    console.log(postData)
     return sendRequest(BASE_URL, 'POST', postData);
 }

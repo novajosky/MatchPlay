@@ -1,12 +1,21 @@
 import React from 'react'
 
-export default function DisplayMessages() {
+export default function DisplayMessages({ posts }) {
+  const titles = posts.map((p, index) => (
+    <div key={index}>{p.title}</div>
+  ))
+  const messages = posts.map((p, index) => (
+    <div key={index}>{p.content}</div>
+  ))
+  const photos = posts.map((p, index) => (
+    <div key={index}>{p.photos}</div>
+  ))
   return (
     <div>
-      <p>Posts</p>
-      {/* <p>Photos: {images}</p>
-      <p>Title: {title}</p>
-      <p>Message: {content}</p> */}
+      <div>Posts</div>
+      <div>Photos: {}</div>
+      <div>Title: {titles}</div>
+      <div>Messages: {messages}</div>
     </div>
   )
 }
