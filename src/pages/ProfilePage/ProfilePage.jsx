@@ -1,19 +1,21 @@
 import React, {useState, useEffect} from "react";
-// import * as usersAPI from '../..utilities/users-api'
+import * as usersAPI from '../../utilities/users-api'
 
 
 export default function Profile() {
-  // const [user] = useState([]);
+  const [user, setUser] = useState({});
 
-  // useEffect (function() {
-  //   const UserDetail = usersAPI.getUser();
-  //   setUser(user);
-  // })
+  useEffect (function() {
+    const UserDetail = usersAPI.getUserData();
+    // setUser(user);
+    setUser(UserDetail)
+  }, [])
+  console.log(user['age'])
 
   return (
     <main>
       <h1>Profile</h1>
-      <div className="profile">
+      {/* <div className="profile">
       <div className="card">
         <header className="card-header">
           <figure className="image profile-avatar">
@@ -40,7 +42,7 @@ export default function Profile() {
           </div>
         </header>
       </div>
-      </div>
+      </div> */}
     </main>
   );
 }

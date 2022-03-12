@@ -14,6 +14,6 @@ export function checkToken() {
     return sendRequest(`${BASE_URL}/check-token`);
 }
 
-export function getUserData(userData) {
-  return sendRequest(BASE_URL, 'GET', userData);
+export function getUserData() {
+  return sendRequest(`${BASE_URL}/profile`);
 }

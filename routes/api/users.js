@@ -19,20 +19,8 @@ router.get('/check-token', usersCtrl.checkToken);
 // Insert ensureLoggedIn on all routes that need protecting
 router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
 // GET user data
-router.get('/get-data', function(req, res, next) {
-    let resultArray = [];
-    mongo.connect(url, function(err, db) {
-        assert.equal(null, err);
-        let cursor = db.collection('user-data').find();
-        cursor.forEach(function(doc, err) {
-            assert.equal(null, err);
-            resultArray.push(doc);
-        }, function() {
-            db.close();
-            res.render('index', {items: resultArray});
-        });
-    });
-});
+router.get('/profile', usersCtrl.getProfile)
+
 router.post('/insert', function(req, res, next) {
     let item = {
         name: req.body.name,

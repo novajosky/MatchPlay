@@ -1,0 +1,17 @@
+.profile {
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+.card-content {
+    padding: 15px;
+  }
+  
+  .card-header-content {
+    padding: 21px;
+  }
+
+.card {
+    margin-bottom: 50px;
+  }
