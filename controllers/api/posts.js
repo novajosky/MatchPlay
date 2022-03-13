@@ -14,16 +14,13 @@ async function getAll(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body.user)
     req.body.user = req.user._id
-    console.log(req.body.user)
     const post = await Post.create(req.body);
     res.json(post);
 }
 
 async function deletePost(req, res) {
-    const posts = await Post.findOneAndDelete({ 
-        user: req.user._id 
-    });
-    res.json(posts);
+    const deletedPost = await Post.findByIdAndDelete(req.params.id);
+    console.log(req.body.user)
+    res.json(deletedPost);
 }

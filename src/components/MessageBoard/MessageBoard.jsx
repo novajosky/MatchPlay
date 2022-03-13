@@ -20,11 +20,19 @@ export default function MessageBoard() {
         console.log(post)
         setPosts([...posts, post]);
     }
+
+    async function handleDelete(id) {
+        console.log('hitting')
+        const deletedPost = await postsAPI.deletePost(id)
+        const updatedPosts = posts.filter(post => post._id !== deletedPost._id)
+        setPosts (updatedPosts)
+    }
+
     return (
         <main>
             <div></div>
             <MessageForm handleAddPost={handleAddPost}/>
-            <DisplayMessages posts={posts} />
+            <DisplayMessages handleDelete={handleDelete} posts={posts} />
             <div></div>
         </main>
     )

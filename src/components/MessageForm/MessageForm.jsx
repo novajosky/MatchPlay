@@ -17,6 +17,7 @@ export default function MessageForm({handleAddPost}) {
         handleAddPost(formData);
     }
 
+
     return (
         <main>
             <form onSubmit={handleSubmit}>
