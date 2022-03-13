@@ -2,6 +2,7 @@
 // This syntax can be helpful documenting where the methods come from 
 import * as usersAPI from './users-api';
 import * as postsAPI from './posts-api';
+import * as coursesAPI from './courses-api';
 
 export async function signUp(userData) {
     // Delegate the network request code to the users-api.js API module

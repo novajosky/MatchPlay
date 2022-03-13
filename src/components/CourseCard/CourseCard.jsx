@@ -1,10 +1,10 @@
 import React from 'react'
 import {Card, Row, Col} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import './MessageCard.css';
+import './CourseCard.css';
 
-export default function DisplayMessages({ post, handleDelete }) {
-    function deletePost(e, id) {
+export default function DisplayCourses({ course, handleDelete }) {
+    function deleteCourse(e, id) {
         e.preventDefault();
         handleDelete(id);
     }
@@ -15,11 +15,13 @@ export default function DisplayMessages({ post, handleDelete }) {
                     <Card style={{ width: '20rem' }}>
                     <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                     <Card.Body>
-                        {post.title}
+                        {course.name}
                         <hr />
-                        {post.content}
+                        {course.address}
                         <hr />
-                        <Button className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
+                        {course.description}
+                        <hr />
+                        <Button className='button' onClick={ e => deleteCourse(e, course._id)} type="submit">Delete</Button>
                     </Card.Body>
                     </Card>
                 </Col>

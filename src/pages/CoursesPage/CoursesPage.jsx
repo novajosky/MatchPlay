@@ -1,19 +1,14 @@
 import React from 'react';
 import './CoursesPage.css'
-// import { GoogleMap } from 'react-google-maps';
-
-
+import CourseBoard from '../../components/CourseBoard/CourseBoard';
 
 export default function CoursesPage() {  
+
   return (
-    // <LoadScript
-    // googleMapsApiKey='MAP_KEY'>
-    //  <GoogleMap
-    //  />
-    // </LoadScript>
+
     <main>
       <div className="container">
-        Courses
+        <CourseBoard />
       </div>
 
     </main>
