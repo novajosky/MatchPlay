@@ -7,9 +7,7 @@ module.exports = {
 };
 
 async function getAll(req, res) {
-    const courses = await Course.find({
-        user: req.user._id
-    });
+    const courses = await Course.find({});
     res.json(courses);
 }
 

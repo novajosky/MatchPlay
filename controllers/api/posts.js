@@ -7,9 +7,7 @@ module.exports = {
 };
 
 async function getAll(req, res) {
-    const posts = await Post.find({
-        user: req.user._id
-    });
+    const posts = await Post.find({});
     res.json(posts);
 }
 
