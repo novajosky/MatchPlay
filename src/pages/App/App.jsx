@@ -6,7 +6,7 @@ import ProfilePage from '../ProfilePage/ProfilePage';
 import MessagesPage from '../MessagesPage/MessagesPage';
 import GolfersPage from '../GolfersPage/GolfersPage';
 import CoursesPage from '../CoursesPage/CoursesPage';
-import LogInPage from '../LogInPage/LogInPage';
+import AuthPage from '../AuthPage/AuthPage';
 import NavBar from "../../components/NavBar/NavBar"
 import { getUser } from '../../utilities/users-service';
 
@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/messages" element={<MessagesPage />}/>
         <Route path="/golfers" element={<GolfersPage />}/>
         <Route path="/courses" element={<CoursesPage />}/>
-        <Route path="/login" element={<LogInPage />}/>
+        <Route path="/login" element={<AuthPage />}/>
       </Routes>
     </main>
   );
