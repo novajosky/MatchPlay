@@ -6,6 +6,7 @@ export function getAll() {
 }
 
 export function add(courseData) {
+    console.log(courseData)
     return sendRequest(BASE_URL, 'POST', courseData);
 }
 

@@ -1,48 +1,38 @@
 import React, {useState, useEffect} from "react";
-import * as usersAPI from '../../utilities/users-api'
 
-
-export default function Profile() {
-  const [user, setUser] = useState({});
-
-  useEffect (function() {
-    const UserDetail = usersAPI.getUserData();
-    // setUser(user);
-    setUser(UserDetail)
-  }, [])
-  console.log(user)
+export default function Profile({ user }) {
 
   return (
     <main>
       <h1>Profile</h1>
-      {/* <div className="profile">
+      <div className="profile">
       <div className="card">
         <header className="card-header">
           <figure className="image profile-avatar">
-            <img className="is-rounded" src={this.state.profile_pic} alt=""/>
+            <img className="is-rounded" src={user.profile_pic} alt=""/>
           </figure>
           <div className="card-header-content profile-info">
-            <h1 className="title">{this.state.name}</h1>
+            <h1 className="title">{user.name}</h1>
             <div className="stats">
               <ul>
-                <li>Name: { this.state.name }</li>
-                <li>Location: { this.state.citystate }</li>
-                <li>Handicap:{ this.state.handicap }</li>
-                <li>drinker: { this.state.drinker }</li>
-                <li>gender: { this.state.gender }</li>
-                <li>pfgender: { this.state.pfgender }</li>
-                <li>playage: { this.state.playage }</li>
-                <li>drinker: { this.state.drinker }</li>
-                <li>meticulous: { this.state.meticulous }</li>
-                <li>etiquette: { this.state.etiquette }</li>
-                <li>skillset: { this.state.skillset }</li>
+                <li>Name: { user.name }</li>
+                <li>Location: { user.citystate }</li>
+                <li>Handicap:{ user.handicap }</li>
+                <li>drinker: { user.drinker }</li>
+                <li>gender: { user.gender }</li>
+                <li>pfgender: { user.pfgender }</li>
+                <li>playage: { user.playage }</li>
+                <li>drinker: { user.drinker }</li>
+                <li>meticulous: { user.meticulous }</li>
+                <li>etiquette: { user.etiquette }</li>
+                <li>skillset: { user.skillset }</li>
               </ul>
             </div>
-            <p>{this.state.description}</p>
+            <p>{user.description}</p>
           </div>
         </header>
       </div>
-      </div> */}
+      </div>
     </main>
   );
 }
