@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/messages" element={<MessagesPage />}/>
         <Route path="/golfers" element={<GolfersPage />}/>
         <Route path="/courses" element={<CoursesPage />}/>
-        <Route path="/login" element={<AuthPage />}/>
+        <Route path="/login" element={<AuthPage setUser={setUser}/>}/>
       </Routes>
     </main>
   );
