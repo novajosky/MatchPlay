@@ -1,7 +1,6 @@
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import { useState } from 'react'
-import Logo from '../../components/Logo/Logo';
 
 export default function Auth({ setUser }) {
 

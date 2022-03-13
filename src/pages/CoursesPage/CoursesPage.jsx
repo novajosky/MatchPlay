@@ -1,6 +1,7 @@
 import React from 'react';
 import './CoursesPage.css'
 import CourseBoard from '../../components/CourseBoard/CourseBoard';
+import CourseMap from '../../components/CourseMap/CourseMap';
 
 export default function CoursesPage() {  
 
@@ -9,6 +10,7 @@ export default function CoursesPage() {
     <main>
       <div className="container">
         <CourseBoard />
+        <CourseMap />
       </div>
 
     </main>
