@@ -1,17 +1,13 @@
-.profile {
-    width: 80vw;
-    margin: auto;
-    margin-top: 100px;
-  }
+li {
+  font-size: 2.1vmin;
+  list-style: none;
+}
 
-.card-content {
-    padding: 15px;
-  }
-  
-  .card-header-content {
-    padding: 21px;
-  }
+h1 {
+  text-align: center;
+}
 
-.card {
-    margin-bottom: 50px;
-  }
+ul {
+  background-color: rgb(40, 139, 6);
+  color: white;
+}

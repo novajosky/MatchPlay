@@ -1,6 +1,7 @@
 import React from 'react'
 import {Container, Col, Row} from "react-bootstrap";
 import CourseCard from '../../components/CourseCard/CourseCard'
+import "./DisplayCourses.css"
 
 export default function DisplayCourses({ courses, handleDelete }) {
   const course = courses.map((c, index) => (
@@ -9,11 +10,9 @@ export default function DisplayCourses({ courses, handleDelete }) {
 
   return (
     <div>
-      <Container>
+      <Container className="container">
         <Row>
-          <Col sm='4'>
-            {course}
-          </Col>
+          {course}
         </Row>
       </Container>
     </div>

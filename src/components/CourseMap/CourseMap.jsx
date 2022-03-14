@@ -40,7 +40,7 @@ function Maps() {
   });
 
   return (
-    <div style={{ display: "flex", height: "calc(100vh - 50px)" }}>
+    <div style={{ display: "flex", height: "calc(70vh - 50px)" }}>
       {/* Google maps has whitelisted codesandbox with overlay, so there is enough to pass an empty string, but for your own app, you need to provide your own api key. Please do not forget to restrict it for your own domain name. */}
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap

@@ -8,7 +8,7 @@ export default function DisplayGolfers({ user }) {
         <div>
             <Row xs={1} md={2} className="g-4">
                 <Col>
-                    <Card style={{ width: '30vw', height: "36vh" }}>
+                    <Card style={{ width: '70vw'}}>
                     <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                     <Card.Body className="cardtext">
                         {user.name}
@@ -24,6 +24,7 @@ export default function DisplayGolfers({ user }) {
                     </Card>
                 </Col>
             </Row>
+            <br/>
         </div>
     )
 }

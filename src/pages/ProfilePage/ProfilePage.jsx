@@ -1,10 +1,9 @@
 import React from "react";
-
+import "./ProfilePage.css";
 export default function Profile({ user }) {
 
   return (
     <main>
-      <h1>Profile</h1>
       <div className="profile">
       <div className="card">
         <header className="card-header">
@@ -15,7 +14,6 @@ export default function Profile({ user }) {
             <h1 className="title">{user.name}</h1>
             <div className="stats">
               <ul>
-                <li>Name: { user.name }</li>
                 <li>Location: { user.citystate }</li>
                 <li>Handicap: { user.handicap }</li>
                 <li>Alcohol: { user.drinker }</li>
