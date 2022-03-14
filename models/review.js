@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const postsSchema = new Schema({
-    title: {
-        type: String,
+const reviewSchema = new Schema({
+    rating: {
+        type: Number,
         required: true,
     },
     content: {
@@ -14,5 +14,9 @@ const postsSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
     },
+    golfer: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
 })
-    module.exports = mongoose.model('Posts', postsSchema);
+    module.exports = mongoose.model('Review', reviewSchema);

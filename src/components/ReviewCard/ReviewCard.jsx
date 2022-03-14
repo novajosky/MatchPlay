@@ -1,10 +1,10 @@
 import React from 'react'
 import {Card, Row, Col} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import ReviewCard from '../ReviewCard/ReviewCard';
 
-export default function DisplayMessages({ post, handleDelete }) {
-    function deletePost(e, id) {
+export default function ReviewCard({ review, handleDelete }) {
+    if (!review) return null;
+    function deleteReview(e, id) {
         e.preventDefault();
         handleDelete(id);
     }
@@ -13,15 +13,14 @@ export default function DisplayMessages({ post, handleDelete }) {
             <Row xs={1} md={2} className="g-4">
                 <Col>
                     <Card style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                     <Card.Body>
-                        {post.title}
+                        {review.rating}
                         <hr />
-                        {post.content}
+                        {review.content}
                         <hr />
-                        <Button className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
+                        <Button className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>
                         <hr />
-                        {post.timestamp}
+                        {review.timestamp}
                         <hr />
                         <ReviewCard />
                     </Card.Body>

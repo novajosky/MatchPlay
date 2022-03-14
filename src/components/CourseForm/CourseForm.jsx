@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from "react";
+import PhotoBoard from "../../components/PhotoBoard/PhotoBoard"
 
 export default function CourseForm({handleAddCourse}) {
     const [formData, setFormData] = useState({
-        // photo: '',
+        photo: '',
         name: '',
         address: '',
         description: '',
@@ -22,11 +23,7 @@ export default function CourseForm({handleAddCourse}) {
     return (
         <main>
             <form onSubmit={handleSubmit}>
-                <label>Add Photo</label>
-                <input 
-                    value={formData.photo} name="photo"
-                    onChange={e => handleChange(e)} 
-                    type="file" accept="image/*"></input>
+                <PhotoBoard />
                 <label>Name</label>
                 <input
                     value={formData.name} name="name"

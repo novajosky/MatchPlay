@@ -3,7 +3,7 @@ import {Container, Col, Row} from "react-bootstrap";
 import ReviewCard from '../../components/ReviewCard/ReviewCard'
 
 export default function DisplayReviews({ reviews, handleDelete }) {
-  const review = reviews.map((r, index) => (
+  const reviewCards = reviews.map((r, index) => (
     <ReviewCard key={index} review={r} handleDelete={handleDelete} />
   ))
 
@@ -12,7 +12,7 @@ export default function DisplayReviews({ reviews, handleDelete }) {
       <Container>
         <Row>
           <Col sm='4'>
-            {review}
+            {reviewCards}
           </Col>
         </Row>
       </Container>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProfilePage.css";
+
 export default function Profile({ user }) {
 
   return (
@@ -8,7 +9,7 @@ export default function Profile({ user }) {
       <div className="card">
         <header className="card-header">
           <figure className="image profile-avatar">
-            <img className="is-rounded" src={user.profile_pic} alt=""/>
+            <img className="is-rounded" src={user.photo} alt=""/>
           </figure>
           <div className="card-header-content profile-info">
             <h1 className="title">{user.name}</h1>

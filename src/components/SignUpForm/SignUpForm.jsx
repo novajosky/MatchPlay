@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
 import './SignUpForm.css'
+import PhotoBoard from "../../components/PhotoBoard/PhotoBoard"
 
 export default class SignUpForm extends Component {
     state = {
+        phtoto: '',
         name: '',
         email: '',
         password: '',
@@ -56,6 +58,7 @@ export default class SignUpForm extends Component {
           <div>
             <div className="form-container">
               <form autoComplete="off" onSubmit={this.handleSubmit}>
+                <PhotoBoard/>
                 <label>Name</label>
                 <input type="text" placeholder="First and Last name" name="name" value={this.state.name} onChange={this.handleChange} required />
                 <label>Email</label>

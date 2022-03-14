@@ -19,6 +19,9 @@ const coursesSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+    },
+    photo: {
+        type: String,
     }
 })
     module.exports = mongoose.model('Courses', coursesSchema);

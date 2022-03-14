@@ -1,19 +1,20 @@
-const Courses = require("../../models/courses");
+const Review = require("../../models/review");
 
 
 module.exports = {
     create,
-    getAll,
+    getForGolfer,
     deleteReview,
 };
 
-async function getAll(req, res) {
-    const reviews = await Review.find({});
+async function getForGolfer(req, res) {
+    const reviews = await Review.find({golfer: req.params.golferId});
     res.json(reviews);
 }
 
 async function create(req, res) {
     req.body.user = req.user._id
+    req.body.golfer = req.params.golferId
     const review = await Review.create(req.body);
     res.json(review);
 }

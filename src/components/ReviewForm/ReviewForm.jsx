@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function ReviewForm({handleAddReview}) {
     const [formData, setFormData] = useState({
-        rating: ['5', '4', '3', '2', '1'],
+        rating: 1,
         content: ''
     })
 
@@ -18,14 +18,14 @@ export default function ReviewForm({handleAddReview}) {
 
   return (
     <div>
-        <form>
+        <form onSubmit={handleSubmit}>
             <select value={formData.rating} name="rating"
               onChange={e => handleChange(e)}>
-                <option>5</option>
-                <option>4</option>
-                <option>3</option>
-                <option>2</option>
-                <option>1</option>
+                <option value='5'>5</option>
+                <option value='4'>4</option>
+                <option value='3'>3</option>
+                <option value='2'>2</option>
+                <option value='1'>1</option>
             </select>
             <textarea
               value={formData.content} name="content"

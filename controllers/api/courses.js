@@ -1,5 +1,6 @@
 const Course = require("../../models/courses");
 
+
 module.exports = {
     create,
     getAll,

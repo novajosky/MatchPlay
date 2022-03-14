@@ -26,7 +26,7 @@ export default function DisplayGolfers({ user }) {
                 </Col>
             </Row>
             <br/>
-            {/* <ReviewBoard /> */}
+            <ReviewBoard golfer={user}/>
         </div>
     )
 }
