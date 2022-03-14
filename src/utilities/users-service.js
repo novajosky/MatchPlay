@@ -3,6 +3,7 @@
 import * as usersAPI from './users-api';
 import * as postsAPI from './posts-api';
 import * as coursesAPI from './courses-api';
+import * as reviewsAPI from './reviews-api';
 
 export async function signUp(userData) {
     // Delegate the network request code to the users-api.js API module

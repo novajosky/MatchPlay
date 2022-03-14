@@ -1,8 +1,7 @@
 import React from 'react'
 import {Card, Row, Col} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import ReviewBoard from '../ReviewBoard/ReviewBoard';
-import './MessageCard.css';
+import ReviewCard from '../ReviewCard/ReviewCard';
 
 export default function DisplayMessages({ post, handleDelete }) {
     function deletePost(e, id) {
@@ -24,11 +23,11 @@ export default function DisplayMessages({ post, handleDelete }) {
                         <hr />
                         {post.timestamp}
                         <hr />
+                        <ReviewCard />
                     </Card.Body>
                     </Card>
                 </Col>
             </Row>
-            {/* <ReviewBoard /> */}
         </div>
     )
 }

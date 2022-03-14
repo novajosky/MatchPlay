@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Row, Col} from "react-bootstrap";
 import "./GolfersCard.css"
+import ReviewBoard from '../ReviewBoard/ReviewBoard';
 
 export default function DisplayGolfers({ user }) {
 
@@ -25,6 +26,7 @@ export default function DisplayGolfers({ user }) {
                 </Col>
             </Row>
             <br/>
+            {/* <ReviewBoard /> */}
         </div>
     )
 }
