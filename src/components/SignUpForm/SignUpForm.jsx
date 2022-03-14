@@ -11,13 +11,13 @@ export default class SignUpForm extends Component {
         age: '',
         citystate: '',
         handicap: '',
-        gender: 'male',
-        pfgender: 'men',
-        playage: 'anyage',
-        drinker: 'drunk',
-        meticulous:'fastplayer',
-        etiquette: 'stickler',
-        skillset: 'anylevel',
+        gender: 'Male',
+        pfgender: 'Men',
+        playage: "I'm comfortable with any age group.",
+        drinker: "Lets get drunk!",
+        meticulous:"I play at a good pace.",
+        etiquette: "Rules Are RULES!",
+        skillset: "I can play with any skill type.",
         error: ''
     };
 
@@ -72,45 +72,45 @@ export default class SignUpForm extends Component {
                 <input type="number" placeholder="Try to estimate otherwise, enter 30" name="handicap" value={this.state.handicap} onChange={this.handleChange} required />
                 <label>Gender</label>
                 <select type="text" name="gender" value={this.state.gender} onChange={this.handleChange} required>
-                  <option value="male">male</option>
-                  <option value="female">female</option>
-                  <option value="other">other</option>
+                  <option value="Male">male</option>
+                  <option value="Female">female</option>
+                  <option value="Other">other</option>
                 </select>
                 <label>Do you have a preferred gender you would like to play with?</label>
                 <select type="text" name="pfgender" value={this.state.pfgender} onChange={this.handleChange} required>
-                  <option value="men">Men</option>
-                  <option value="women">Women</option>
-                  <option value="anyone">Anyone</option>
+                  <option value="Men">Men</option>
+                  <option value="Women">Women</option>
+                  <option value="Anyone">Anyone</option>
                 </select>
                 <label>Do you mind playing with people much older or younger than you?</label>
                 <select type="text" name="playage" value={this.state.playage} onChange={this.handleChange} required>
-                  <option value="sameage">I would prefer to play with people in my age group.</option>
-                  <option value="anyage">I'm comfortable with any age group.</option>
+                  <option value="I would prefer to play with people in my age group.">I would prefer to play with people in my age group.</option>
+                  <option value="I'm comfortable with any age group.">I'm comfortable with any age group.</option>
                 </select>
                 <label>How do you feel about drinking on the course?</label>
                 <select type="text" name="drinker" value={this.state.drinker} onChange={this.handleChange} required>
-                  <option value="lightdrink">I can drink a beer or two.</option>
-                  <option value="othersdrink">I don't mind others drinking.</option>
-                  <option value="no alcohol">No Alcohol Please.</option>
-                  <option value="drunk">Lets get drunk!</option>
+                  <option value="I can drink a beer or two.">I can drink a beer or two.</option>
+                  <option value="I don't mind others drinking.">I don't mind others drinking.</option>
+                  <option value="No Alcohol Please.">No Alcohol Please.</option>
+                  <option value="Lets get drunk!">Lets get drunk!</option>
                 </select>
                 <label>Are you a meticulous player?</label>
                 <select type="text" name="meticulous" value={this.state.meticulous} onChange={this.handleChange} required>
-                  <option value="slowplayer">I take my time in preparing for a shot.</option>
-                  <option value="fastplayer">I play fast. I don't like to wait.</option>
-                  <option value="notslow">I play at a good pace.</option>
+                  <option value="I take my time in preparing for a shot.">I take my time in preparing for a shot.</option>
+                  <option value="I play fast. I don't like to wait.">I play fast. I don't like to wait.</option>
+                  <option value="I play at a good pace.">I play at a good pace.</option>
                 </select>
                 <label>Are you a stickler for eqiquette?</label>
                 <select type="text" name="etiquette" value={this.state.etiquette} onChange={this.handleChange} required>
-                  <option value="stickler">Rules Are RULES!</option>
-                  <option value="lax">I dont mind how others play.</option>
-                  <option value="somerules">I would like others to have some etiquette.</option>
+                  <option value="Rules Are RULES!">Rules Are RULES!</option>
+                  <option value="I dont mind how others play.">I dont mind how others play.</option>
+                  <option value="I would like others to have some etiquette.">I would like others to have some etiquette.</option>
                 </select>
                 <label>How do you feel about playing with players who have a different skillset?</label>
                 <select type="text" name="skillset" value={this.state.skillset} onChange={this.handleChange} required>
-                  <option value="anylevel">I can play with any skill type.</option>
-                  <option value="mylevel">I prefer to play with people within my handicap range.</option>
-                  <option value="somelevel">I dont mind as long as there isnt a huge disparity in handicap. </option>
+                  <option value="I can play with any skill type.">I can play with any skill type.</option>
+                  <option value="I prefer to play with people within my handicap range.">I prefer to play with people within my handicap range.</option>
+                  <option value="I dont mind as long as there isnt a huge disparity in handicap.">I dont mind as long as there isnt a huge disparity in handicap. </option>
                 </select>
                 <button type="submit" disabled={disable}>SIGN UP</button>
               </form>

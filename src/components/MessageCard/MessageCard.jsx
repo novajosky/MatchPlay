@@ -20,6 +20,11 @@ export default function DisplayMessages({ post, handleDelete }) {
                         {post.content}
                         <hr />
                         <Button className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
+                        <hr />
+                        {post.timestamp}
+                        <hr />
+                        <input></input>
+                        <Button onClick="" className="commentbutton" type="submit">Comment</Button>
                     </Card.Body>
                     </Card>
                 </Col>

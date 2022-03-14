@@ -33,37 +33,37 @@ const userSchema = new Schema({
   },
   gender: {
     type: String,
-    enum: ["male", "female", "other"],
+    enum: ["Male", "Female", "Other"],
     required: true
   },
   pfgender: {
     type: String,
-    enum: ['men', 'women', 'anyone'],
+    enum: ['Men', 'Women', 'Anyone'],
     required: true
   },
   playage: {
     type: String,
-    enum: ["sameage", "anyage"],
+    enum: ["I would prefer to play with people in my age group.", "I'm comfortable with any age group."],
     required: true
   },
   drinker: {
     type: String,
-    enum: ["lightdrink", "othersdrink", "no alcohol", "drunk"],
+    enum: ["I can drink a beer or two.", "I don't mind others drinking.", "No Alcohol Please.", "Lets get drunk!"],
     required: true
   },
   meticulous: {
     type: String,
-    enum: ['slowplayer', 'fastplayer', 'notslow'],
+    enum: ['I take my time in preparing for a shot.', "I play fast. I don't like to wait.", 'I play at a good pace.'],
     required: true
   },
   etiquette: {
     type: String,
-    enum: ['stickler', 'lax', 'somerules'],
+    enum: ['Rules Are RULES!', 'I dont mind how others play.', 'I would like others to have some etiquette.'],
     required: true
   },
   skillset: {
     type: String,
-    enum: ['anylevel', 'mylevel', 'somelevel'],
+    enum: ['I can play with any skill type.', 'I prefer to play with people within my handicap range.', 'I dont mind as long as there isnt a huge disparity in handicap.'],
     required: true
   },
 }, {

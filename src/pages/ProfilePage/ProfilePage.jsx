@@ -17,15 +17,15 @@ export default function Profile({ user }) {
               <ul>
                 <li>Name: { user.name }</li>
                 <li>Location: { user.citystate }</li>
-                <li>Handicap:{ user.handicap }</li>
-                <li>drinker: { user.drinker }</li>
-                <li>gender: { user.gender }</li>
-                <li>pfgender: { user.pfgender }</li>
-                <li>playage: { user.playage }</li>
-                <li>drinker: { user.drinker }</li>
-                <li>meticulous: { user.meticulous }</li>
-                <li>etiquette: { user.etiquette }</li>
-                <li>skillset: { user.skillset }</li>
+                <li>Handicap: { user.handicap }</li>
+                <li>Alcohol: { user.drinker }</li>
+                <li>Gender: { user.gender }</li>
+                <li>Do you have a preferred gender you would like to play with? { user.pfgender }</li>
+                <li>Do you mind playing with people much older or younger than you? { user.playage }</li>
+                <li>How do you feel about drinking on the course? { user.drinker }</li>
+                <li>Are you a meticulous player? { user.meticulous }</li>
+                <li>Are you a stickler for eqiquette? { user.etiquette }</li>
+                <li>How do you feel about playing with players who have a different skillset? { user.skillset }</li>
               </ul>
             </div>
             <p>{user.description}</p>
