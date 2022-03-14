@@ -19,7 +19,7 @@ router.get('/check-token', usersCtrl.checkToken);
 // Insert ensureLoggedIn on all routes that need protecting
 router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
 // GET user data
-router.get('/profile', usersCtrl.getProfile);
+router.get('/', usersCtrl.getAll);
 
 // router.post('/insert', function(req, res, next) {
 //     let item = {

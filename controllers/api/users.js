@@ -6,7 +6,7 @@ module.exports = {
     create,
     login,
     checkToken,
-    getProfile,
+    getAll,
 };
 
 function checkToken(req, res) {
@@ -54,12 +54,11 @@ async function login(req, res) {
     }
 }
 
-async function getProfile(req, res){
-  console.log(req.user)
+async function getAll(req, res){
   try {
-    const user = await User.find({ email: req.user.email });
-    console.log(user[0]);
-    res.json(user[0]);
+    const users = await User.find();
+    console.log(users)
+    res.json(users);
   } catch {
     res.status(400).json('Bad Credentials');
   }
