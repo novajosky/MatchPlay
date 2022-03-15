@@ -8,9 +8,6 @@ export default function Profile({ user }) {
       <div className="profile">
       <div className="card">
         <header className="card-header">
-          <figure className="image profile-avatar">
-            <img className="is-rounded" src={user.photo} alt=""/>
-          </figure>
           <div className="card-header-content profile-info">
             <h1 className="title">{user.name}</h1>
             <div className="stats">

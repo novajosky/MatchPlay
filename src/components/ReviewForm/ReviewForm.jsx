@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from "react";
+import Form from "react-bootstrap/Form"
+import Card from "react-bootstrap/Card"
 
 export default function ReviewForm({handleAddReview}) {
     const [formData, setFormData] = useState({
@@ -18,7 +20,9 @@ export default function ReviewForm({handleAddReview}) {
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
+      <Card>
+        <Form onSubmit={handleSubmit}>
+            <label>Rating</label> &nbsp;
             <select value={formData.rating} name="rating"
               onChange={e => handleChange(e)}>
                 <option value='5'>5</option>
@@ -27,12 +31,13 @@ export default function ReviewForm({handleAddReview}) {
                 <option value='2'>2</option>
                 <option value='1'>1</option>
             </select>
-            <textarea
+            <Form.Control
               value={formData.content} name="content"
               onChange={e => handleChange(e)}
-            />
+              />
             <button type="submit">Add Review</button>
-        </form>
+        </Form>
+      </Card>
     </div>
   )
 }
