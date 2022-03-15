@@ -17,6 +17,7 @@ export default function GolfersPage() {
   return (
 
     <main>
+      <h1>Golfers</h1>
       <div className="container">
         <DisplayGolfers golfers={golfers}/>
       </div>

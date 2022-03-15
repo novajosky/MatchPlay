@@ -22,7 +22,7 @@ export default function MessageForm({handleAddPost}) {
 
 
     return (
-        <Card>
+        <Card border="success">
             <Form>
                 <form onSubmit={handleSubmit}>
                     <label>Title</label>

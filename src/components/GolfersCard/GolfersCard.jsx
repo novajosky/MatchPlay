@@ -9,18 +9,14 @@ export default function DisplayGolfers({ user }) {
 
     return (
         <div>
-            <Card>
+            <Card border="success">
                 <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                 <Card.Body>
-                    {user.name}
-                    <hr />
-                    Location: {user.citystate}
-                    <hr />
-                    Handicap: {user.handicap}
-                    <hr />
-                    Alcohol? {user.drinker}
-                    <hr />
-                    Meticulous? {user.meticulous}
+                    <Card.Text>{user.name}</Card.Text>
+                    <Card.Text>{user.citystate}</Card.Text>
+                    <Card.Text>Handicap: {user.handicap}</Card.Text>
+                    <Card.Text>Alcohol use? {user.drinker}</Card.Text>
+                    <Card.Text>{user.meticulous}</Card.Text>
                 </Card.Body>
                 <Button variant="success" size="sm" component={Link} to={`/golfer/${user._id}`}>Details</Button>
             </Card>

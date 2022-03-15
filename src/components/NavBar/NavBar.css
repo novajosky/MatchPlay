@@ -14,3 +14,10 @@
 .mplogo {
     height: 40px;
 }
+
+.phantom {
+    display: block;
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+}

@@ -17,7 +17,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <Navbar bg="success" expand="lg" className="color-nav">
+    <Navbar bg="success" expand="lg" className="color-nav" sticky="top">
       <Container>
         <Navbar.Brand className="logo" href="/"><img className="mplogo" src={logo} alt="MatchPlay"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,21 +25,21 @@ export default function NavBar({ user, setUser }) {
           <Nav className="me-auto">
             {user ?
               <>
-              <p className='navp'>Welcome {user.name}</p>
-                <Link className="link" to="/profile">My Profile</Link>
-                <Link className="link" to="/messages">Messages</Link>
-                <Link className="link" to="/golfers">Golfers</Link>
-                <Link className="link" to="/courses">Courses</Link>
-                <Link className="link" to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
-                <Link className="link" to="" onClick={handleLogOut}>Log Out</Link>
+              <p className='navp'>Welcome {user.name}&nbsp;&nbsp;</p>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/profile">&nbsp;&nbsp;My Profile&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/messages">&nbsp;&nbsp;Messages&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/golfers">&nbsp;&nbsp;Golfers&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/courses">&nbsp;&nbsp;Courses&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/mail">&nbsp;&nbsp;Contact Us&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="" onClick={handleLogOut}>&nbsp;&nbsp;Log Out&nbsp;&nbsp;</Link>
               </>
               :
               <>
-                <Link className="link" to="/messages">Messages</Link>
-                <Link className="link" to="/golfers">Golfers</Link>
-                <Link className="link" to="/courses">Courses</Link>
-                <Link className="link" to="mailto:MikeNovajosky@gmail.com">Contact Us</Link>
-                <Link className="link" to="/login">Log In</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/messages">&nbsp;&nbsp;Messages&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/golfers">&nbsp;&nbsp;Golfers&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/courses">&nbsp;&nbsp;Courses&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/mail">&nbsp;&nbsp;Contact Us&nbsp;&nbsp;</Link>
+                <Link className="link" style={{ textDecoration: 'none' }} to="/login">&nbsp;&nbsp;Log In&nbsp;&nbsp;</Link>
               </>
             }
           </Nav>

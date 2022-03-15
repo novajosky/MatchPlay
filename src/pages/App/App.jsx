@@ -10,6 +10,8 @@ import CoursesPage from '../CoursesPage/CoursesPage';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from "../../components/NavBar/NavBar"
 import { getUser } from '../../utilities/users-service';
+import MailLink from '../../components/MailLink/MailLink';
+import Footer from "../../components/Footer/Footer"
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -24,8 +26,10 @@ export default function App() {
         <Route path="/golfers" element={<GolfersPage />}/>
         <Route path="/courses" element={<CoursesPage />}/>
         <Route path="/login" element={<AuthPage setUser={setUser}/>}/>
+        <Route path="/mail" element={<MailLink />}/>
         {/* <Route path="/golfer/:id" element={<GolferCardDetail />}/> */}
       </Routes>
+      <Footer />
     </main>
   );
 }
