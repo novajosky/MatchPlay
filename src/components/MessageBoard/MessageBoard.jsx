@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import * as postsAPI from '../../utilities/posts-api'
-import MessageForm from '../MessageForm/MessageForm'
-import DisplayMessages from '../DisplayMessages/DisplayMessages'
+import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
+import * as postsAPI from '../../utilities/posts-api';
+import MessageForm from '../MessageForm/MessageForm';
+import DisplayMessages from '../DisplayMessages/DisplayMessages';
 
-export default function MessageBoard() {
+export default function MessageBoard({ user }) {
     const [posts, setPosts] = useState([]);
+    const { id } = useParams();
+    const [showButton, setShowButton] = useState(null);
 
     useEffect(function() {
         async function getPosts() {
@@ -32,7 +35,7 @@ export default function MessageBoard() {
         <main>
             <div></div>
             <MessageForm handleAddPost={handleAddPost}/>
-            <DisplayMessages handleDelete={handleDelete} posts={posts} />
+            <DisplayMessages activeUser={user} showButton={showButton} setShowButton={setShowButton} id={id} handleDelete={handleDelete} posts={posts} />
             <div></div>
         </main>
     )

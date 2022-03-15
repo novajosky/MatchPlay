@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Card from "react-bootstrap/Card";
+import Form from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import PhotoBoard from "../PhotoBoard/PhotoBoard"
 
 export default function MessageForm({handleAddPost}) {
     const [formData, setFormData] = useState({
@@ -20,10 +22,8 @@ export default function MessageForm({handleAddPost}) {
 
 
     return (
-        <main>
-            <form onSubmit={handleSubmit}>
-                <label>Add Photo</label>
-                <PhotoBoard />
+        <Card>
+            <Form onSubmit={handleSubmit}>
                 <label>Title</label>
                 <input
                     value={formData.title} name="title"
@@ -34,10 +34,10 @@ export default function MessageForm({handleAddPost}) {
                     value={formData.content} name="content"
                     onChange={e => handleChange(e)}
                     />
-                <button type="submit">Add Post</button>
-            </form>
+                <Button variant="success" type="submit">Add Post</Button>
+            </Form>
             <div>
             </div>
-        </main>
+        </Card>
     );
 }

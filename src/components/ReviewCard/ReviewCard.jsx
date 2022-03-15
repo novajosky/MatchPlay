@@ -12,16 +12,13 @@ export default function ReviewCard({ review, handleDelete }) {
         <div>
             <Row xs={1} md={2} className="g-4">
                 <Col>
-                    <Card style={{ width: '20rem' }}>
+                    <Card style={{ width: '40vw' }}>
                     <Card.Body>
-                        {review.rating}
+                        Rating: {review.rating}
                         <hr />
                         {review.content}
                         <hr />
-                        <Button className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>
-                        <hr />
-                        {review.timestamp}
-                        <hr />
+                        <Button variant="success" size="sm" className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>
                         <ReviewCard />
                     </Card.Body>
                     </Card>

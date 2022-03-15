@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from "react";
-import PhotoBoard from "../../components/PhotoBoard/PhotoBoard"
+import Card from "react-bootstrap/Card";
+import Form from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+
 
 export default function CourseForm({handleAddCourse}) {
     const [formData, setFormData] = useState({
-        photo: '',
         name: '',
         address: '',
         description: '',
@@ -21,9 +23,8 @@ export default function CourseForm({handleAddCourse}) {
 
 
     return (
-        <main>
+        <Card>
             <form onSubmit={handleSubmit}>
-                <PhotoBoard />
                 <label>Name</label>
                 <input
                     value={formData.name} name="name"
@@ -39,10 +40,8 @@ export default function CourseForm({handleAddCourse}) {
                     value={formData.description} name="description"
                     onChange={e => handleChange(e)}
                     />
-                <button type="submit">Add Course</button>
+                <Button variant="success" size="sm" type="submit">Add Course</Button>
             </form>
-            <div>
-            </div>
-        </main>
+        </Card>
     );
 }

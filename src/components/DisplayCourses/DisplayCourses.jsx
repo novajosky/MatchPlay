@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Col, Row} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import CourseCard from '../../components/CourseCard/CourseCard'
 import "./DisplayCourses.css"
 

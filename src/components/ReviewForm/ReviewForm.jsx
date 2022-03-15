@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import Form from "react-bootstrap/Form"
 import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 export default function ReviewForm({handleAddReview}) {
     const [formData, setFormData] = useState({
@@ -20,24 +21,22 @@ export default function ReviewForm({handleAddReview}) {
 
   return (
     <div>
-      <Card>
-        <Form onSubmit={handleSubmit}>
-            <label>Rating</label> &nbsp;
-            <select value={formData.rating} name="rating"
-              onChange={e => handleChange(e)}>
-                <option value='5'>5</option>
-                <option value='4'>4</option>
-                <option value='3'>3</option>
-                <option value='2'>2</option>
-                <option value='1'>1</option>
-            </select>
-            <Form.Control
-              value={formData.content} name="content"
-              onChange={e => handleChange(e)}
-              />
-            <button type="submit">Add Review</button>
-        </Form>
-      </Card>
+      <Form onSubmit={handleSubmit}>
+          <label>Rating</label> &nbsp;
+          <select value={formData.rating} name="rating"
+            onChange={e => handleChange(e)}>
+              <option value='5'>5</option>
+              <option value='4'>4</option>
+              <option value='3'>3</option>
+              <option value='2'>2</option>
+              <option value='1'>1</option>
+          </select>
+          <textarea
+            value={formData.content} name="content"
+            onChange={e => handleChange(e)}
+            />
+          <Button variant="success" size="sm" type="submit">Add Review</Button>
+      </Form>
     </div>
   )
 }

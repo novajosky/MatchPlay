@@ -35,7 +35,6 @@ export default function NavBar({ user, setUser }) {
               </>
               :
               <>
-                <Link className="link" to="/profile">My Profile</Link>
                 <Link className="link" to="/messages">Messages</Link>
                 <Link className="link" to="/golfers">Golfers</Link>
                 <Link className="link" to="/courses">Courses</Link>

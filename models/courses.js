@@ -20,8 +20,8 @@ const coursesSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
     },
-    photo: {
-        type: String,
+    photos: {
+        type: Array,
     }
 })
     module.exports = mongoose.model('Courses', coursesSchema);
