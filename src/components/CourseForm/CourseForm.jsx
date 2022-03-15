@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from "react";
-import Card from "react-bootstrap/Card";
-import Form from "react-bootstrap/Card";
+import { Card } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import Label from "react-bootstrap/Card"
 
 
 export default function CourseForm({handleAddCourse}) {
@@ -24,25 +25,24 @@ export default function CourseForm({handleAddCourse}) {
 
     return (
         <Card border="success">
-            <form onSubmit={handleSubmit}>
-                <label>Name</label>
-                <input
+            <Form onSubmit={handleSubmit}>
+                <Label>Name</Label>
+                <Form.Control
                     value={formData.name} name="name"
                     onChange={e => handleChange(e)}
                     />
-                <br/>
-                <label>Address</label>
-                <textarea
+                <Label>Address</Label>
+                <Form.Control
                     value={formData.address} name="address"
                     onChange={e => handleChange(e)}
                     />
-                <label>Description</label>
-                <textarea
+                <Label>Description</Label>
+                <Form.Control
                     value={formData.description} name="description"
                     onChange={e => handleChange(e)}
                     />
                 <Button variant="success" size="sm" type="submit">Add Course</Button>
-            </form>
+            </Form>
         </Card>
     );
 }

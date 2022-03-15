@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import {Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./GolfersCard.css";
 import ReviewBoard from '../ReviewBoard/ReviewBoard';
 import Button from "react-bootstrap/Button";
@@ -9,7 +9,7 @@ export default function DisplayGolfers({ user }) {
 
     return (
         <div>
-            <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
+            <Card className="text-center" border="success" style={{ width: '85vw' }}>
                 <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                 <Card.Body>
                     <Card.Text>{user.name}</Card.Text>

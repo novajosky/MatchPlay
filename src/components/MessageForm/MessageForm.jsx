@@ -1,8 +1,9 @@
 import React from 'react';
-import Card from "react-bootstrap/Card";
-import Form from "react-bootstrap/Card";
+import { Card, Container, Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import Label from "react-bootstrap/Card";
 import { useState } from "react";
+
 
 export default function MessageForm({handleAddPost}) {
     const [formData, setFormData] = useState({
@@ -22,24 +23,22 @@ export default function MessageForm({handleAddPost}) {
 
 
     return (
-        <Card border="success">
-            <Form>
-                <form onSubmit={handleSubmit}>
-                    <label>Title</label>
-                    <input
+        <Container>
+            <Card className="text-center" border="success" style={{ width: '85vw' }}>
+                <Form size="sm" autoComplete="off" onSubmit={handleSubmit}>
+                    <Label>Title</Label>
+                    <Form.Control size="sm"
                         value={formData.title} name="title"
                         onChange={e => handleChange(e)}
                         />
-                    <label>Content</label>
-                    <textarea
+                    <Label>Content</Label>
+                    <Form.Control size="sm"
                         value={formData.content} name="content"
                         onChange={e => handleChange(e)}
                         />
-                    <Button variant="success" type="submit">Add Post</Button>
-                </form>
-            </Form>
-            <div>
-            </div>
-        </Card>
+                    <Button size="sm" variant="success" type="submit">Add Post</Button>
+                </Form>
+            </Card>
+        </Container>
     );
 }

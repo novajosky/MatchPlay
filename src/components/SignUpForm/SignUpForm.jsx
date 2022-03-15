@@ -57,7 +57,7 @@ export default class SignUpForm extends Component {
     render() {
         const disable = this.state.password !== this.state.confirm;
         return (
-          <Card border="secondary">
+          <Card border="success">
             <Form autoComplete="off" onSubmit={this.handleSubmit}>
               <Form.Label>Name</Form.Label>
               <Form.Control size="sm" type="text" placeholder="First and Last name" name="name" value={this.state.name} onChange={this.handleChange} required />

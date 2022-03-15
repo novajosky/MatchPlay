@@ -11,12 +11,11 @@ export default function DisplayMessages({ post, handleDelete }) {
     }
     return (
         <div>
-            <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
-                <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
+            <Card className="text-center" border="success" style={{ width: '85vw' }}>
                 <Card.Body>
-                    <Card.Text>{post.title}</Card.Text>
-                    <Card.Text>{post.content}</Card.Text>
-                    <Button variant="success" className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
+                    <Card.Text size="sm">{post.title}</Card.Text>
+                    <Card.Text size="sm">{post.content}</Card.Text>
+                    <Button size="sm" variant="success" className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
                 </Card.Body>
             </Card>
             {/* <ReviewBoard /> */}

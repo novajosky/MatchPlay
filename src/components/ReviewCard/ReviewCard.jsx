@@ -9,10 +9,9 @@ export default function ReviewCard({ review, handleDelete }) {
         handleDelete(id);
     }
     return (
-        <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
+        <Card className="text-center" border="success" style={{ width: '85vw' }}>
         <Card.Body>
-            Rating: {review.rating}
-            <hr />
+            Rating: {review.rating} &nbsp; &nbsp; &nbsp;
             {review.content}
             <hr />
             <Button variant="success" size="sm" className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>

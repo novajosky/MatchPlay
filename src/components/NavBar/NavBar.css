@@ -4,7 +4,7 @@
 
 .link:hover {
     text-decoration: none;
-    color: rgb(14, 124, 0);
+    color: rgb(214, 211, 23);
 }
 
 .navp {
@@ -13,11 +13,4 @@
 
 .mplogo {
     height: 40px;
-}
-
-.phantom {
-    display: block;
-    padding: 20px;
-    height: 30px;
-    width: 100%;
 }

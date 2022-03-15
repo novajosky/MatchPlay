@@ -1,8 +1,10 @@
 html, body, #root {
     height: 100%;
+    font-family: londrina shadow;
 }
 
 .footer {
+    font-family: londrina shadow;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -11,11 +13,6 @@ html, body, #root {
     align-content: center;
     text-align: center;
     color: white
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
 }
 
 .phantom {
