@@ -24,7 +24,7 @@ export default function CourseForm({handleAddCourse}) {
 
 
     return (
-        <Card border="success">
+        <Card className="text-center" border="success" style={{ width: '85vw' }}>
             <Form onSubmit={handleSubmit}>
                 <Label>Name</Label>
                 <Form.Control

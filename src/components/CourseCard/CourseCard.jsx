@@ -10,7 +10,6 @@ export default function DisplayCourses({ course, handleDelete }) {
     }
     return (
         <Card bclasssName="text-center" border="success" style={{ width: '85vw' }}>
-            <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
             <Card.Body>
                 <Card.Title>
                     {course.name}
