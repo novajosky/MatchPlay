@@ -23,19 +23,21 @@ export default function MessageForm({handleAddPost}) {
 
     return (
         <Card>
-            <form onSubmit={handleSubmit}>
-                <label>Title</label>
-                <input
-                    value={formData.title} name="title"
-                    onChange={e => handleChange(e)}
-                    />
-                <label>Content</label>
-                <textarea
-                    value={formData.content} name="content"
-                    onChange={e => handleChange(e)}
-                    />
-                <Button variant="success" type="submit">Add Post</Button>
-            </form>
+            <Form>
+                <form onSubmit={handleSubmit}>
+                    <label>Title</label>
+                    <input
+                        value={formData.title} name="title"
+                        onChange={e => handleChange(e)}
+                        />
+                    <label>Content</label>
+                    <textarea
+                        value={formData.content} name="content"
+                        onChange={e => handleChange(e)}
+                        />
+                    <Button variant="success" type="submit">Add Post</Button>
+                </form>
+            </Form>
             <div>
             </div>
         </Card>

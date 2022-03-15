@@ -20,7 +20,7 @@ export default function DisplayMessages({ post, handleDelete }) {
                         <hr />
                         {post.content}
                         <hr />
-                        <Button className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
+                        <Button variant="success" className='button' onClick={ e => deletePost(e, post._id)} type="submit">Delete</Button>
                     </Card.Body>
                     </Card>
                 </Col>
