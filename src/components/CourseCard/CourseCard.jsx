@@ -9,22 +9,19 @@ export default function DisplayCourses({ course, handleDelete }) {
         handleDelete(id);
     }
     return (
-        <Card border="success" style={{ width: '21rem' }}>
+        <Card bclasssName="text-center" border="success" style={{ width: '85vw' }}>
             <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
             <Card.Body>
                 <Card.Title>
                     {course.name}
                 </Card.Title>
-                <hr />
-                <Card.Subtitle>
+                <Card.Text>
                     {course.address}
-                </Card.Subtitle>
-                <hr />
+                </Card.Text>
                 <Card.Text>
                     {course.description}
                 </Card.Text>
-                <hr />
-                <Button className='button' onClick={ e => deleteCourse(e, course._id)} type="submit">Delete</Button>
+                <Button className='button' variant="success" onClick={ e => deleteCourse(e, course._id)} type="submit">Delete</Button>
             </Card.Body>
         </Card>
     )

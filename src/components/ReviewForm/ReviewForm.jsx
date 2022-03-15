@@ -20,7 +20,7 @@ export default function ReviewForm({handleAddReview}) {
     }
 
   return (
-    <div>
+    <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
       <Form onSubmit={handleSubmit}>
           <label>Rating</label> &nbsp;
           <select value={formData.rating} name="rating"
@@ -37,6 +37,6 @@ export default function ReviewForm({handleAddReview}) {
             />
           <Button variant="success" size="sm" type="submit">Add Review</Button>
       </Form>
-    </div>
+    </Card>
   )
 }

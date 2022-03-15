@@ -11,7 +11,7 @@ export default function DisplayMessages({ post, handleDelete }) {
     }
     return (
         <div>
-            <Card border="success">
+            <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
                 <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                 <Card.Body>
                     <Card.Text>{post.title}</Card.Text>

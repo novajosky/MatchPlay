@@ -9,7 +9,7 @@ export default function DisplayGolfers({ user }) {
 
     return (
         <div>
-            <Card border="success">
+            <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
                 <Card.Img variant="top" src="holder.js/120px120">{}</Card.Img>
                 <Card.Body>
                     <Card.Text>{user.name}</Card.Text>

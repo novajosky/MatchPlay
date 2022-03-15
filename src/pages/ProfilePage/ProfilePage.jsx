@@ -6,7 +6,6 @@ export default function Profile({ user }) {
   return (
     <main>
       <h1 className="title">{user.name}</h1>
-      <div className="profile">
         <div className="stats">
           <ul>
             <li>Location: { user.citystate }</li>
@@ -21,7 +20,6 @@ export default function Profile({ user }) {
             <li>How do you feel about playing with players who have a different skillset? { user.skillset }</li>
           </ul>
         </div>
-      </div>
     </main>
   );
 }

@@ -9,21 +9,15 @@ export default function ReviewCard({ review, handleDelete }) {
         handleDelete(id);
     }
     return (
-        <div>
-            <Row xs={1} md={2} className="g-4">
-                <Col>
-                    <Card style={{ width: '40vw' }}>
-                    <Card.Body>
-                        Rating: {review.rating}
-                        <hr />
-                        {review.content}
-                        <hr />
-                        <Button variant="success" size="sm" className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>
-                        <ReviewCard />
-                    </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </div>
+        <Card classsName="text-center" border="success" style={{ width: '85vw' }}>
+        <Card.Body>
+            Rating: {review.rating}
+            <hr />
+            {review.content}
+            <hr />
+            <Button variant="success" size="sm" className='button' onClick={ e => deleteReview(e, review._id)} type="submit">Delete</Button>
+            <ReviewCard />
+        </Card.Body>
+        </Card>
     )
 }

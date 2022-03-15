@@ -9,13 +9,7 @@ export default function DisplayReviews({ reviews, handleDelete }) {
 
   return (
     <div>
-      <Container>
-        <Row>
-          <Col sm='4'>
-            {reviewCards}
-          </Col>
-        </Row>
-      </Container>
+       {reviewCards}
     </div>
   )
 }

@@ -24,25 +24,25 @@ export default function CourseForm({handleAddCourse}) {
 
     return (
         <Card border="success">
-                <form onSubmit={handleSubmit}>
-                    <label>Name</label>
-                    <input
-                        value={formData.name} name="name"
-                        onChange={e => handleChange(e)}
-                        />
-                    <br/>
-                    <label>Address</label>
-                    <textarea
-                        value={formData.address} name="address"
-                        onChange={e => handleChange(e)}
-                        />
-                    <label>Description</label>
-                    <textarea
-                        value={formData.description} name="description"
-                        onChange={e => handleChange(e)}
-                        />
-                    <Button variant="success" size="sm" type="submit">Add Course</Button>
-                </form>
+            <form onSubmit={handleSubmit}>
+                <label>Name</label>
+                <input
+                    value={formData.name} name="name"
+                    onChange={e => handleChange(e)}
+                    />
+                <br/>
+                <label>Address</label>
+                <textarea
+                    value={formData.address} name="address"
+                    onChange={e => handleChange(e)}
+                    />
+                <label>Description</label>
+                <textarea
+                    value={formData.description} name="description"
+                    onChange={e => handleChange(e)}
+                    />
+                <Button variant="success" size="sm" type="submit">Add Course</Button>
+            </form>
         </Card>
     );
 }
