@@ -23,7 +23,7 @@ export default function MessageForm({handleAddPost}) {
 
     return (
         <Card>
-            <Form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>Title</label>
                 <input
                     value={formData.title} name="title"
@@ -35,7 +35,7 @@ export default function MessageForm({handleAddPost}) {
                     onChange={e => handleChange(e)}
                     />
                 <Button variant="success" type="submit">Add Post</Button>
-            </Form>
+            </form>
             <div>
             </div>
         </Card>
