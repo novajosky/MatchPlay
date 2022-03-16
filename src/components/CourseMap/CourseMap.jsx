@@ -41,7 +41,6 @@ function Maps() {
 
   return (
     <div style={{ display: "flex", height: "calc(70vh - 50px)" }}>
-      {/* Google maps has whitelisted codesandbox with overlay, so there is enough to pass an empty string, but for your own app, you need to provide your own api key. Please do not forget to restrict it for your own domain name. */}
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap
           id="my-map"
@@ -53,12 +52,6 @@ function Maps() {
             lat,
             lng
           }}
-          // I want to set new center coordinates
-          // whenever user moves in the map
-          // since there will be an option to add
-          // a marker on a map, and that will trigger
-          // rerender and map needs to stay where
-          // it was before rerender
         >
           <MemoizedMyComponentWithHook setLat={setLat} setLng={setLng} />
         </GoogleMap>

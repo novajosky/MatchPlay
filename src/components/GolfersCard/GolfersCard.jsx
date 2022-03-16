@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import "./GolfersCard.css";
 import ReviewBoard from '../ReviewBoard/ReviewBoard';
-import Button from "react-bootstrap/Button";
 
 export default function DisplayGolfers({ user }) {
 
@@ -18,7 +15,6 @@ export default function DisplayGolfers({ user }) {
                     <Card.Text>Alcohol use? {user.drinker}</Card.Text>
                     <Card.Text>{user.meticulous}</Card.Text>
                 </Card.Body>
-                <Button variant="success" size="sm" component={Link} to={`/golfer/${user._id}`}>Details</Button>
             </Card>
             <ReviewBoard golfer={user}/>
         </div>

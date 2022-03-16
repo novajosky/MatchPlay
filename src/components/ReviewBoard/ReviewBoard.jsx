@@ -17,7 +17,6 @@ export default function ReviewBoard({ golfer }) {
 
     async function handleAddReview(reviewData) {
         const review = await reviewsAPI.add(reviewData, golfer._id);
-        console.log(review)
         setReviews([...reviews, review]);
     }
 

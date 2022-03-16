@@ -17,3 +17,7 @@ export function checkToken() {
 export function getAll() {
   return sendRequest(BASE_URL);
 }
+
+export function updateUser(userData) {
+  return sendRequest(BASE_URL, "POST", userData);
+}

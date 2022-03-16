@@ -13,15 +13,12 @@ export default function CourseBoard() {
         }
         getCourses();
     }, []);
-        console.log(courses)
-    async function handleAddCourse(courseData) {
+        async function handleAddCourse(courseData) {
         const course = await coursesAPI.add(courseData);
-        console.log(course)
         setCourses([...courses, course]);
     }
 
     async function handleDelete(id) {
-        console.log('hitting')
         const deletedCourse = await coursesAPI.deleteCourse(id)
         const updatedCourses = courses.filter(course => course._id !== deletedCourse._id)
         setCourses (updatedCourses)

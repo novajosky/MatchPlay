@@ -1,7 +1,6 @@
 import React from 'react'
 import {Container, Row} from "react-bootstrap";
 import CourseCard from '../../components/CourseCard/CourseCard'
-import "./DisplayCourses.css"
 
 export default function DisplayCourses({ courses, handleDelete }) {
   const course = courses.map((c, index) => (

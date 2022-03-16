@@ -12,7 +12,6 @@ export default function GolfersPage() {
     }
     getGolfers();
 }, []);
-  console.log(golfers)
 
   return (
 

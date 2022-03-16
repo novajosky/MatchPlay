@@ -1,7 +1,6 @@
 import React from 'react'
 import {Card} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import './CourseCard.css';
 
 export default function DisplayCourses({ course, handleDelete }) {
     function deleteCourse(e, id) {

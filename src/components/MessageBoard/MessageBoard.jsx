@@ -16,16 +16,12 @@ export default function MessageBoard({ user }) {
         }
         getPosts();
     }, []);
-        console.log(posts)
     async function handleAddPost(postData) {
-        console.log(postData)
         const post = await postsAPI.add(postData);
-        console.log(post)
         setPosts([...posts, post]);
     }
 
     async function handleDelete(id) {
-        console.log('hitting')
         const deletedPost = await postsAPI.deletePost(id)
         const updatedPosts = posts.filter(post => post._id !== deletedPost._id)
         setPosts (updatedPosts)
