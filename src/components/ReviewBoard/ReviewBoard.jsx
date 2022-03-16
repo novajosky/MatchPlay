@@ -29,7 +29,7 @@ export default function ReviewBoard({ golfer }) {
     return (
         <div>
             <ReviewForm handleAddReview={handleAddReview}/>
-            <DisplayReviews reviews={reviews}/>
+            <DisplayReviews handleDelete={handleDelete} reviews={reviews}/>
         </div>
     )
 }

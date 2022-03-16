@@ -19,16 +19,17 @@ export default function App() {
   return (
     <main className="App">
       <NavBar user={user} setUser={setUser} />
+      {user ? 
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/profile" element={<ProfilePage user={user} />}/>
         <Route path="/messages" element={<MessagesPage />}/>
         <Route path="/golfers" element={<GolfersPage />}/>
         <Route path="/courses" element={<CoursesPage />}/>
-        <Route path="/login" element={<AuthPage setUser={setUser}/>}/>
         <Route path="/mail" element={<MailLink />}/>
         {/* <Route path="/golfer/:id" element={<GolferCardDetail />}/> */}
       </Routes>
+        : <AuthPage setUser={setUser}/>}
       <Footer />
     </main>
   );

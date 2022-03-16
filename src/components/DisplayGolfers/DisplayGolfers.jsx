@@ -8,14 +8,8 @@ export default function DisplayGolfers({ golfers }) {
   ))
 
   return (
-    <div>
-      <Container>
-        <Row>
-          <Col sm='4'>
-            {golfer}
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container>
+      {golfer}
+    </Container>
   )
 }

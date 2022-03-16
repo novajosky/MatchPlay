@@ -9,7 +9,7 @@ export default function DisplayCourses({ course, handleDelete }) {
         handleDelete(id);
     }
     return (
-        <Card bclasssName="text-center" border="success" style={{ width: '85vw' }}>
+        <Card className="text-center" border="success" style={{ width: '85vw' }}>
             <Card.Body>
                 <Card.Title>
                     {course.name}
