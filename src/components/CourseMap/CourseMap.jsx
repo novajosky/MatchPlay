@@ -31,8 +31,8 @@ const MemoizedMyComponentWithHook = React.memo(MyComponentWithHook);
 function Maps() {
   // Initial map coordinates that will change
   // when onCenterChanged is called
-  const [lat, setLat] = useState(47.6062);
-  const [lng, setLng] = useState(-122.3321);
+  const [lat, setLat] = useState(47.5845);
+  const [lng, setLng] = useState(-122.3070);
 
   console.log("Latitude and longitude:", {
     lat,
@@ -44,7 +44,7 @@ function Maps() {
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <GoogleMap
           id="my-map"
-          zoom={13}
+          zoom={12}
           mapContainerStyle={{
             flex: 1
           }}

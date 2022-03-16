@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card} from "react-bootstrap";
 import {Button} from "react-bootstrap";
+import Photos from "../Photos/Photos"
 
 export default function DisplayCourses({ course, handleDelete }) {
     function deleteCourse(e, id) {
@@ -19,7 +20,8 @@ export default function DisplayCourses({ course, handleDelete }) {
                 <Card.Text>
                     {course.description}
                 </Card.Text>
-                <Button className='button' variant="success" onClick={ e => deleteCourse(e, course._id)} type="submit">Delete</Button>
+                {/* <Button className='button' variant="success" onClick={ e => deleteCourse(e, course._id)} type="submit">Delete</Button>
+                <Photos /> */}
             </Card.Body>
         </Card>
     )
