@@ -31,3 +31,9 @@ a {
 .link-button:hover {
     color:rgb(145, 168, 11);
 }
+
+.Container {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
