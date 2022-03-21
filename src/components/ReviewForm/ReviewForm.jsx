@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button"
 
 export default function ReviewForm({handleAddReview}) {
     const [formData, setFormData] = useState({
-        rating: 1,
+        rating: 5,
         content: ''
     })
 
@@ -18,6 +18,10 @@ export default function ReviewForm({handleAddReview}) {
     function handleSubmit(e) {
         e.preventDefault();
         handleAddReview(formData);
+        setFormData({
+          rating: 5,
+          content: ''
+        });
     }
 
   return (

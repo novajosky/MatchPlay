@@ -1,8 +1,6 @@
-import React from 'react';
-import { Card, Container, Form } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Card, Container, Form, Button } from "react-bootstrap";
 import Label from "react-bootstrap/Card";
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 export default function MessageForm({handleAddPost}) {
@@ -19,6 +17,11 @@ export default function MessageForm({handleAddPost}) {
     function handleSubmit(e) {
         e.preventDefault();
         handleAddPost(formData);
+        setFormData({
+            photo: '',
+            title: '',
+            content: ''
+        });
     }
 
 
@@ -31,7 +34,7 @@ export default function MessageForm({handleAddPost}) {
                         value={formData.title} name="title"
                         onChange={e => handleChange(e)}
                         />
-                    <Label>Content</Label>
+                    <Label>Message</Label>
                     <Form.Control size="sm"
                         value={formData.content} name="content"
                         onChange={e => handleChange(e)}

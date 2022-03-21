@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap"
 
 export default function Photos() {
 
@@ -8,9 +9,9 @@ export default function Photos() {
     <div>
       {selectedImage && (
         <div>
-        <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
         <br />
-        <button onClick={()=>setSelectedImage(null)}>Remove</button>
+        <Button variant="success" onClick={()=>setSelectedImage(null)}>Remove</Button>
         </div>
       )}
       <br />
@@ -24,7 +25,7 @@ export default function Photos() {
           setSelectedImage(event.target.files[0]);
         }}
         />
-        <button >Add Photo</button>
+        <Button size="sm" type="submit" variant="success">Add Photo</Button>
     </div>
   );
 };

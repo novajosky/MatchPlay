@@ -20,6 +20,11 @@ export default function CourseForm({handleAddCourse}) {
     function handleSubmit(e) {
         e.preventDefault();
         handleAddCourse(formData);
+        setFormData({
+            name: '',
+            address: '',
+            description: ''
+        });
     }
 
 
